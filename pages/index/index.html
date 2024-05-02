@@ -1,58 +1,136 @@
-<div class="template">
-	<img class="template-avatar" src="/template/img/avatar.png" alt="" />
-	<div class="template-title">Welcome to WAW Template</div>
-	<div class="template-readme">
-		<div class="template-readme__title">Readme:</div>
-		<div class="template-readme__item">
-			To create new page you can type in terminal:
-			<span class="template-readme__code">waw page NAME</span>
-		</div>
-		<div class="template-readme__item">
-			You can change port in
-			<span class="template-readme__code">config.json</span>
-			of development webiste
-			<a
-				class="template-readme__link"
-				href="http://localhost:8000"
-				>localhost:8000</a
-			>
-		</div>
-		<div class="template-readme__item">
-			JSON in template.json is accesible over all pages
-		</div>
-		<div class="template-readme__item">
-			JSON in page.json of each page is accesible only of that specific page
-		</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IT Kamianets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-		<div class="template-readme__item">
-			Files can be served with template.json prefix and path to the file within the template.
-		</div>
-		<div class="template-readme__item">
-			More details of how to use template you can find in
-			<a
-				class="template-readme__link"
-				href="https://webartwork.github.io/wjst/docs"
-				>Wjst Documentation</a
-			>
-		</div>
-		<div class="template-readme__item">
-			Styles: You should import each file to
-			<span class="template-readme__code">index.scss </span> located in
-			<span class="template-readme__code">css</span> folder and write SCSS files in
-			<span class="template-readme__code">css/scss</span>.
-		</div>
-		<div class="template-readme__item">
-			Have also look on a SPA client
-			<a class="template-readme__link" href="/profile">Angular project</a>
-		</div>
-		<div class="template-readme__item">
-			You can build your template pages with pre-made
-			<a class="template-readme__link" href="/sections"> Sections</a>
-		</div>
-		<div class="template-readme__item">
-			Your sections can be filled with nice
-			<a class="template-readme__link" href="/components"> Components </a>
-			which you can build as you grow
-		</div>
-	</div>
-</div>
+<header>
+    <!-- Your header content here -->
+</header>
+
+<main>
+    <section class="section section-dark" style="background-image: url('template/img/img1.png')">
+        <div class="content">
+            <h2>Ласкаво просимо до IT Kamianets</h2>
+            <p>
+                IT Kamianets — це динамічна і інноваційна організація, яка надає ІТ-рішення, спрямовані на підвищення технологічних можливостей бізнесів у різних галузях нашого міста. Наш досвід включає розробку індивідуальних програмних рішень та забезпечення комплексної ІТ-підтримки в агропромисловому комплексі, харчовій промисловості, медицині, мистецтві, автомобільній галузі та багатьох інших секторах. Ми допомагаємо підприємствам оптимізувати їхню діяльність завдяки передовим технологічним рішенням.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-light" style="background-image: url('template/img/img2.png')">
+        <div class="content">
+            <h2>Технологічне партнерство в агроіндустрії</h2>
+            <p>
+                IT Kamianets пропонує розробку спеціалізованих ІТ-рішень для агроіндустрії, які допомагають підприємствам управляти процесами купівлі та продажу продукції. Наші інноваційні програми дозволяють збільшити продуктивність, спростити логістику і забезпечити ефективний облік.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-dark" style="background-image: url('template/img/img3.png')">
+        <div class="content">
+            <h2>Розумні ІТ-рішення для ресторанів і кафе</h2>
+            <p>
+                Від піцерій до кав'ярень, IT Kamianets забезпечує ресторани інноваційними ІТ-системами для ефективного управління замовленнями, доставкою та обслуговуванням клієнтів. Наші рішення допомагають оптимізувати обслуговування та підвищити задоволеність клієнтів.
+            </p>
+        </div>
+    </section>
+
+    <!-- Додайте інші секції тут -->
+
+    <section class="section section-light" style="background-image: url('template/img/img4.png')">
+        <div class="content">
+            <h2>Інновації в медичному обслуговуванні</h2>
+            <p>
+                Наші ІТ-рішення для медичної галузі охоплюють усе від приватних клінік до медичних лабораторій. Програми для управління клінічними даними, пацієнтською інформацією та логістикою аптек, допомагають підвищити ефективність медичного обслуговування.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-dark" style="background-image: url('template/img/img5.png')">
+        <div class="content">
+            <h2>Підтримка мистецтва через технології</h2>
+            <p>
+                IT Kamianets сприяє мистецтву, надаючи технологічну підтримку галереям, майстер-класам з глини та виробникам ручних сувенірів. Ми допомагаємо митцям та ремісникам створювати онлайн магазини та ефективно просувати їх унікальні твори.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-light" style="background-image: url('template/img/img6(2).png')">
+        <div class="content">
+            <h2>Рішення для автомобільної індустрії</h2>
+            <p>
+                IT Kamianets пропонує веб-розробки та інші ІТ-рішення для автосервісів і магазинів автозапчастин, допомагаючи їм підвищити видимість і ефективність на ринку.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-dark" style="background-image: url('template/img/img7.png')">
+        <div class="content">
+            <h2>Технологічні рішення для моди</h2>
+            <p>
+                Наші ІТ-сервіси для індустрії одягу охоплюють все від онлайн-магазинів до систем управління запасами, що дозволяє ритейлерам одягу підвищити ефективність продажів та управління товаром.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-light" style="background-image: url('template/img/img8.png')">
+        <div class="content">
+            <h2>Інновації в туризмі</h2>
+            <p>
+                IT Kamianets розробляє рішення, що допомагають туристичним агентствам і організаторам екскурсій підвищувати ефективність і привабливість своїх послуг через цифровізацію.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-dark" style="background-image: url('template/img/img9.png')">
+        <div class="content">
+            <h2>Цифровізація спорту та фітнесу</h2>
+            <p>
+                Ми надаємо ІТ-рішення для фітнес-центрів і спортивних клубів, що дозволяє їм управляти клієнтськими базами, заняттями і маркетинговими кампаніями більш ефективно.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-light" style="background-image: url('template/img/img10.png')">
+        <div class="content">
+            <h2>Технології у освіті</h2>
+            <p>
+                IT Kamianets сприяє освітнім закладам, надаючи їм ІТ-рішення для курсів, тренінгів та управління навчальним процесом, щоб робити освіту більш доступною та ефективною.
+            </p>
+        </div>
+    </section>
+    <section class="section section-dark" style="background-image: url('template/img/img11.png')">
+        <div class="content">
+            <h2>Зв'яжіться з нами</h2>
+            <p>
+                Якщо вам потрібна допомога з ІТ-рішеннями або ви хочете дізнатися більше про наші послуги, не вагайтеся зв'язатися з нами. Наша команда завжди готова надати вам підтримку та відповісти на будь-які запитання.
+            </p>
+            <form action="submit.php" method="post">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Ім'я" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Номер телефону" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Зв'язатися</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+
+
+
+</main>
+
+<footer>
+    <!-- Your footer content here -->
+</footer>
+
+</html>
