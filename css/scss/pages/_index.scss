@@ -1,8 +1,8 @@
 $body-bg-color: #fff; // колір фону
-$text-color-light: #000; // колір тексту на світлому фоні
+$text-color-light: #9cb5f9; // колір тексту на світлому фоні
 $text-color-dark: #fff; // колір тексту на темному фоні
-$dark-bg-color: #0b486b; // темний фон
-$heading-color: #333; // колір заголовків
+$dark-bg-color: #9cb5f9; // темний фон
+$heading-color: #6478fd; // колір заголовків в світлих секціях
 
 body {
     margin: 0;
@@ -18,48 +18,67 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    color: $text-color-light; // колір тексту на світлому фоні
+    color: $text-color-light;
     text-align: center;
     position: relative;
 
     .content {
-        z-index: 1; /* зміщення вперед від затемнення */
+        z-index: 0;
     }
 
     h2 {
         font-size: 2em;
         margin-bottom: 20px;
-        color: $heading-color; // колір заголовків
+        color: $heading-color; // Колір заголовків в усіх секціях
     }
 
     p {
         font-size: 1.2em;
-        margin: 0 auto; /* центрування тексту */
-        max-width: 800px; /* максимальна ширина тексту */
+        margin: 0 auto;
+        max-width: 800px; // Максимальна ширина тексту
+        color: $text-color-light; // Колір тексту в усіх секціях
     }
 
-    &:not(.section-dark) {
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5); /* напівпрозорий білий фон */
+    &:first-child {
+        background: linear-gradient(to bottom, #6478fd, #A6BEFF); // Градієнт для першої секції
+        h2, p {
+            color: $text-color-dark; // Заголовок і текст у першій темній секції
         }
     }
+
+    &:not(:first-child) {
+        &.section-dark {
+            background: $dark-bg-color;
+            h2, p {
+                color: $text-color-dark; // Заголовок і текст у інших темних секціях
+            }
+        }
+
+        &.section-light {
+            background: $body-bg-color;
+            h2, p {
+                color: $text-color-light; // Заголовок і текст у світлих секціях
+            }
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-container {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+
+    .image-container img {
+        border-radius: 50%;
+        max-width: 300px;
+        height: auto;
+    }
+    
 }
 
-.section-dark {
-    color: $text-color-dark; // колір тексту на темному фоні
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($dark-bg-color, 0.8); /* темний фон */
-    }
-}
