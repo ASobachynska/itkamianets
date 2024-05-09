@@ -1,12 +1,24 @@
+$body-bg-color: #fff; // колір фону
+$text-color-light: #000; // колір тексту на світлому фоні
+$text-color-dark: #fff; // колір тексту на темному фоні
+$dark-bg-color: #0b486b; // темний фон
+$heading-color: #333; // колір заголовків
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 .section {
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-position: right center;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    color: #fff;
+    color: $text-color-light; // колір тексту на світлому фоні
     text-align: center;
     position: relative;
 
@@ -17,10 +29,13 @@
     h2 {
         font-size: 2em;
         margin-bottom: 20px;
+        color: $heading-color; // колір заголовків
     }
 
     p {
         font-size: 1.2em;
+        margin: 0 auto; /* центрування тексту */
+        max-width: 800px; /* максимальна ширина тексту */
     }
 
     &:not(.section-dark) {
@@ -31,12 +46,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* затемнення фону */
+            background: rgba(255, 255, 255, 0.5); /* напівпрозорий білий фон */
         }
     }
 }
 
 .section-dark {
+    color: $text-color-dark; // колір тексту на темному фоні
     &:after {
         content: '';
         position: absolute;
@@ -44,61 +60,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8); /* затемнення фону */
+        background: rgba($dark-bg-color, 0.8); /* темний фон */
     }
-}
-.section {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-    position: relative;
-}
-
-.content {
-    z-index: 1; /* зміщення вперед від затемнення */
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    margin: 0 auto; /* центрування тексту */
-    max-width: 800px; /* максимальна ширина тексту */
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    border: none; /* видалення рамки */
-    border-radius: 20px; /* закруглені краї */
-    background-color: rgba(255, 255, 0, 0.5); /* жовтий напівпрозорий колір */
-    color: #000; /* чорний колір тексту */
-}
-
-button[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* слабке затемнення при наведенні */
 }
