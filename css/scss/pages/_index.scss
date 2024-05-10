@@ -1,15 +1,44 @@
-$body-bg-color: #f5f7ff; // колір фону
-$text-color-light: #a1abf7; // колір тексту на світлому фоні
-$text-color-dark: #fff; // колір тексту на темному фоні
-$dark-bg-color: #a1abf7; // темний фон
-$heading-color: a1abf7; // колір заголовків в світлих секціях
+// Змінні кольорів
+$body-bg-color: #f5f7ff;
+$text-color-light: #a1abf7;
+$text-color-dark: #fff;
+$dark-bg-color: #a1abf7;
+$heading-color: #a1abf7;
 
+// Стилі для загальних елементів
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
+.header-content, .footer-content {
+    width: 100%; // Змінено ширину на 100%
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-content h1, .footer-content h1 {
+    margin: 0;
+}
+
+.header-links, .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.header-links li, .footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.header-links li a, .footer-links li a {
+    color: #a1abf7;
+    text-decoration: none;
+}
+
+// Стилі для секцій
 .section {
     height: 100vh;
     background-size: cover;
@@ -29,20 +58,24 @@ body {
     h2 {
         font-size: 2em;
         margin-bottom: 20px;
-        color: $heading-color; // Колір заголовків в усіх секціях
+        color: $heading-color;
     }
 
     p {
         font-size: 1.2em;
         margin: 0 auto;
-        max-width: 800px; // Максимальна ширина тексту
-        color: $text-color-light; // Колір тексту в усіх секціях
+        max-width: 800px;
+        color: $text-color-light;
     }
 
     &:first-child {
-        background: linear-gradient(to bottom, #6c5bd8, #a1abf7); // Градієнт для першої секції
+        background: linear-gradient(to bottom, #6c5bd8, #a1abf7);
         h2, p {
-            color: $text-color-dark; // Заголовок і текст у першій темній секції
+            color: $text-color-dark;
+            margin-top: -50px; // Піднімаємо контент у першій секції на 50px
+        }
+        .content p {
+            margin-top: 0; // Піднімаємо опис у першій секції на той самий рівень, що і заголовок
         }
     }
 
@@ -50,16 +83,17 @@ body {
         &.section-dark {
             background: $dark-bg-color;
             h2, p {
-                color: $text-color-dark; // Заголовок і текст у інших темних секціях
+                color: $text-color-dark;
             }
         }
 
         &.section-light {
             background: $body-bg-color;
             h2, p {
-                color: $text-color-light; // Заголовок і текст у світлих секціях
+                color: $text-color-light;
             }
         }
+        
     }
 
     .flex-container {
@@ -73,38 +107,83 @@ body {
         padding-right: 20px;
     }
 
-
     .image-container img {
         border-radius: 50%;
         max-width: 300px;
         height: auto;
     }
+}
 
-    
-.footer-content {
-    background-color: #333;
+// Стилі для хедера
+header, .footer {
+    background-color: #6c5bd8;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px;
     text-align: center;
 }
 
-.footer-content p {
+.header-content, .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1, .footer-content h1 {
     margin: 0;
+    font-size: 1.5em;
+}
+
+.header-links, .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-links li, .footer-links li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.header-links li:first-child, .footer-links li:first-child {
+    margin-left: 0;
+}
+
+.header-links li a, .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content {
+    background-color: #6c5bd8;
+    width: 100%; // Змінено ширину на 100%
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer-links {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
 }
 
 .footer-links li {
-    display: inline;
-    margin: 0 10px;
+    margin-left: 20px;
+}
+
+.footer-links li:first-child {
+    margin-left: 0;
 }
 
 .footer-links li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
-}
 
+.footer-links li a:hover {
+    text-decoration: none; /* Змінено з underline на none */
+}
