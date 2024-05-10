@@ -65,7 +65,7 @@ body {
 }
 
 .footer-links li a:hover {
-    color: #6c5bd8; /* Колір тексту при наведенні */
+    color: #a1abf7; /* Колір тексту при наведенні */
     text-decoration: none; /* Підкреслення тексту при наведенні */
 }
 
@@ -187,10 +187,10 @@ header, .footer {
 }
 
 .footer-content {
-    background: linear-gradient(to bottom, #a1abf7, #8474eb, #6c5bd8);
+    background: #6c5bd8;
     color: #fff;
     width: 100%;
-    padding: 60px;
+    padding: 40px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -199,11 +199,10 @@ header, .footer {
     
 }
 
-
 .footer-links {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 1px;
     display: flex;
 }
 
@@ -219,20 +218,32 @@ header, .footer {
     color: #fff;
     text-decoration: none;
 }
-
-/* Збільшення розміру тексту "Ласкаво просимо до IT Kamianets" */
 .section .text-container h2 {
     font-size: 3.9em; // Встановлюємо бажаний розмір шрифту
     max-width: 700px; // Задаємо максимальну ширину тексту (MEW)
     margin-top: -170px; /* Додаємо верхній відступ */
 }
 
+.section {
+    position: relative; // Додаємо позицію "relative" для контейнера .section
+
+    &:first-child::after {
+        content: '';
+        position: absolute;
+        top: 130px;
+        bottom: 260px;
+        left: 50%; // Початок лінії в центрі контейнера
+        width: 1px; // Ширина лінії
+        background-color: #ffffff; // Колір лінії
+        transform: translateX(-50%); // Зсув на половину ширини, щоб лінія була посередині
+    }
+}
+
 .section .text-container p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     max-width: 500px; // Задаємо максимальну ширину тексту (MEW)
     text-align: left;
 }
-
 .rounded-button {
     border-radius: 30px; /* Радіус закруглення */
     background-color: #6c5bd8; /* Колір фону кнопки */
