@@ -1,3 +1,4 @@
+//#6c5bd8
 // Змінні кольорів
 $body-bg-color: #f5f7ff;
 $text-color-light: #a1abf7;
@@ -38,6 +39,17 @@ body {
     text-decoration: none;
 }
 
+.header-links li a:hover {
+    color: #a1abf7; /* Колір тексту при наведенні */
+    text-decoration: none; /* Підкреслення тексту при наведенні */
+}
+
+.footer-links li a:hover {
+    color: #6c5bd8; /* Колір тексту при наведенні */
+    text-decoration: none; /* Підкреслення тексту при наведенні */
+}
+
+
 // Стилі для секцій
 .section {
     height: 100vh;
@@ -69,7 +81,7 @@ body {
     }
 
     &:first-child {
-        background: linear-gradient(to bottom, #6c5bd8, #a1abf7);
+        background: radial-gradient(ellipse at center, #6c5bd8, #a1abf7); /* Градієнт */
         h2, p {
             color: $text-color-dark;
             margin-top: -140px; // Піднімаємо контент у першій секції на 150px (MEW)
@@ -155,15 +167,18 @@ header, .footer {
 }
 
 .footer-content {
-    background-color: #6c5bd8;
-    width: 100%; // Змінено ширину на 100%
-    padding: 30px;
+    background: linear-gradient(to bottom, #a1abf7, #6c5bd8); /* Градієнт зверху вниз */
+    color: #fff;
+    width: 100%;
+    padding: 60px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    
 }
+
 
 .footer-links {
     list-style: none;
@@ -181,20 +196,37 @@ header, .footer {
 }
 
 .footer-links li a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
-}
-
-.footer-links li a:hover {
-    text-decoration: none; /* Змінено з underline на none */
 }
 
 /* Збільшення розміру тексту "Ласкаво просимо до IT Kamianets" */
 .section .text-container h2 {
-    font-size: 3.5em; // Встановлюємо бажаний розмір шрифту
-    max-width: 600px; // Задаємо максимальну ширину тексту (MEW)
+    font-size: 4em; // Встановлюємо бажаний розмір шрифту
+    max-width: 700px; // Задаємо максимальну ширину тексту (MEW)
+    margin-top: -170px; /* Додаємо верхній відступ */
 }
 
 .section .text-container p {
-    max-width: 600px; // Задаємо максимальну ширину тексту (MEW)
+    font-size: 1.2em;
+    max-width: 500px; // Задаємо максимальну ширину тексту (MEW)
+    text-align: left;
+}
+
+.rounded-button {
+    border-radius: 30px; /* Радіус закруглення */
+    background-color: #6c5bd8; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту */
+    padding: 15px 30px; /* Збільшуємо відступи всередині кнопки */
+    font-size: 1.2em; /* Збільшуємо розмір шрифту */
+    border: none; /* Видаляємо рамку */
+    cursor: pointer; /* Змінюємо курсор при наведенні */
+    transition: background-color 0.3s ease; /* Анімація зміни кольору фону */
+    text-align: left; /* Вирівнюємо текст по лівій стороні */
+    display: inline-block; /* Встановлюємо блочний рівень відображення */
+    margin-top: 10px; /* Додаємо верхній відступ */
+}
+
+.rounded-button:hover {
+    background-color: rgb(156, 235, 117); /* Колір фону кнопки при наведенні */
 }
