@@ -13,6 +13,26 @@ body {
     font-family: Arial, sans-serif;
 }
 
+#goTopBtn {
+    position: fixed; /* Фіксуємо кнопку на екрані */
+    bottom: 20px; /* Відступ знизу */
+    right: 30px; /* Відступ справа */
+    z-index: 99; /* Забезпечимо, щоб кнопка була поверх інших елементів */
+    border: none; /* Видаляємо рамку */
+    outline: none; /* Видаляємо контур фокусу */
+    background-color: #6c5bd8; /* Колір фону кнопки */
+    color: white; /* Колір тексту кнопки */
+    cursor: pointer; /* Змінюємо курсор при наведенні */
+    padding: 15px; /* Збільшуємо відступи всередині кнопки */
+    border-radius: 30px; /* Радіус закруглення */
+    font-size: 18px; /* Розмір шрифту */
+    text-decoration: none; /* Видаляємо підкреслення */
+}
+
+#goTopBtn:hover {
+    background-color: #8474eb; /* Колір фону кнопки при наведенні */
+}
+
 .header-content, .footer-content {
     width: 100%; // Змінено ширину на 100%
     max-width: 100%;
@@ -129,8 +149,8 @@ body {
 
 // Стилі для хедера
 header, .footer {
-    background-color: #6c5bd8;
-    color: #fff;
+    background-color: #fff;
+    color: #6c5bd8;
     padding: 10px 20px;
     text-align: center;
 }
@@ -162,12 +182,12 @@ header, .footer {
 }
 
 .header-links li a, .footer-links li a {
-    color: #fff;
+    color: #6c5bd8;
     text-decoration: none;
 }
 
 .footer-content {
-    background: linear-gradient(to bottom, #a1abf7, #6c5bd8); /* Градієнт зверху вниз */
+    background: linear-gradient(to bottom, #a1abf7, #8474eb, #6c5bd8);
     color: #fff;
     width: 100%;
     padding: 60px;
@@ -202,7 +222,7 @@ header, .footer {
 
 /* Збільшення розміру тексту "Ласкаво просимо до IT Kamianets" */
 .section .text-container h2 {
-    font-size: 4em; // Встановлюємо бажаний розмір шрифту
+    font-size: 3.9em; // Встановлюємо бажаний розмір шрифту
     max-width: 700px; // Задаємо максимальну ширину тексту (MEW)
     margin-top: -170px; /* Додаємо верхній відступ */
 }
@@ -228,5 +248,6 @@ header, .footer {
 }
 
 .rounded-button:hover {
-    background-color: rgb(156, 235, 117); /* Колір фону кнопки при наведенні */
+    background-color: #fff; /* Колір фону кнопки при наведенні */
+    color:#6c5bd8;
 }
