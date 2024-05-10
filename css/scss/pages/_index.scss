@@ -72,12 +72,13 @@ body {
         background: linear-gradient(to bottom, #6c5bd8, #a1abf7);
         h2, p {
             color: $text-color-dark;
-            margin-top: -50px; // Піднімаємо контент у першій секції на 50px
+            margin-top: -140px; // Піднімаємо контент у першій секції на 150px (MEW)
         }
-        .content p {
-            margin-top: 0; // Піднімаємо опис у першій секції на той самий рівень, що і заголовок
+        .content {
+            padding-top: -150px; // Збільшуємо верхній відступ вмісту на 150px, щоб врахувати зміну висоти
         }
     }
+    
 
     &:not(:first-child) {
         &.section-dark {
@@ -186,4 +187,9 @@ header, .footer {
 
 .footer-links li a:hover {
     text-decoration: none; /* Змінено з underline на none */
+}
+
+/* Збільшення розміру тексту "Ласкаво просимо до IT Kamianets" */
+.section .text-container h2 {
+    font-size: 4em; // Встановлюємо бажаний розмір шрифту
 }
