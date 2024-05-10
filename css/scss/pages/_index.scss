@@ -1,8 +1,8 @@
-$body-bg-color: #fff; // колір фону
-$text-color-light: #9cb5f9; // колір тексту на світлому фоні
+$body-bg-color: #f5f7ff; // колір фону
+$text-color-light: #a1abf7; // колір тексту на світлому фоні
 $text-color-dark: #fff; // колір тексту на темному фоні
-$dark-bg-color: #9cb5f9; // темний фон
-$heading-color: #6478fd; // колір заголовків в світлих секціях
+$dark-bg-color: #a1abf7; // темний фон
+$heading-color: a1abf7; // колір заголовків в світлих секціях
 
 body {
     margin: 0;
@@ -40,7 +40,7 @@ body {
     }
 
     &:first-child {
-        background: linear-gradient(to bottom, #6478fd, #A6BEFF); // Градієнт для першої секції
+        background: linear-gradient(to bottom, #6c5bd8, #a1abf7); // Градієнт для першої секції
         h2, p {
             color: $text-color-dark; // Заголовок і текст у першій темній секції
         }
@@ -79,6 +79,32 @@ body {
         max-width: 300px;
         height: auto;
     }
+
     
+.footer-content {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
 }
 
