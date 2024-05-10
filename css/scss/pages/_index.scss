@@ -191,5 +191,10 @@ header, .footer {
 
 /* Збільшення розміру тексту "Ласкаво просимо до IT Kamianets" */
 .section .text-container h2 {
-    font-size: 4em; // Встановлюємо бажаний розмір шрифту
+    font-size: 3.5em; // Встановлюємо бажаний розмір шрифту
+    max-width: 600px; // Задаємо максимальну ширину тексту (MEW)
+}
+
+.section .text-container p {
+    max-width: 600px; // Задаємо максимальну ширину тексту (MEW)
 }
