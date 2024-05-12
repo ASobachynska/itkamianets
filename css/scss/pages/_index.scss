@@ -262,3 +262,30 @@ header, .footer {
     background-color: #fff; /* Колір фону кнопки при наведенні */
     color:#6c5bd8;
 }
+
+.image-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap; // Забороняємо перенесення на новий рядок
+        gap: 20px; // Встановлюємо відступ між зображеннями
+        margin-top: 20px; // Задаємо верхній відступ для ряду зображень
+    }
+
+    .image-item {
+        text-align: center; // Вирівнюємо текст по центру
+        flex: 1; // Встановлюємо рівномірну ширину для кожного елементу
+    }
+
+    .image-item img {
+        width: 100%; // Заповнюємо всю доступну ширину для зображення
+        border-radius: 10px; // Закруглення кутів для зображення
+    }
+
+    .text-container {
+        margin-top: 10px; // Задаємо верхній відступ для контейнера тексту
+    }
+
+    .text-container p {
+        font-size: 1em; // Задаємо розмір шрифту для тексту
+    }
