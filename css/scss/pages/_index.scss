@@ -190,13 +190,12 @@ header, .footer {
     background: #6c5bd8;
     color: #fff;
     width: 100%;
-    padding: 40px;
+    padding: 50px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    
 }
 
 .footer-links {
@@ -261,6 +260,10 @@ header, .footer {
 .rounded-button:hover {
     background-color: #fff; /* Колір фону кнопки при наведенні */
     color:#6c5bd8;
+}
+
+.contact-button {
+    margin-top: 20px;
 }
 
 .image-row {
