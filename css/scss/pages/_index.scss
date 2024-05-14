@@ -38,6 +38,14 @@ body {
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px; /* Задаємо ширину */
+    height: auto; /* Автоматична висота, щоб зберегти пропорції */
+    margin-right: 20px; /* Задаємо відстань зправа */
+    border-radius: 70%; /* Додаємо радіус закруглення для логотипу */
 }
 
 .header-content h1, .footer-content h1 {
@@ -149,7 +157,7 @@ body {
 }
 
 // Стилі для хедера
-header, .footer {
+.header, .footer {
     background-color: #fff;
     color: #6c5bd8;
     padding: 10px 20px;
@@ -164,7 +172,10 @@ header, .footer {
 
 .header-content h1, .footer-content h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 24px; /* Розмір шрифту */
+    font-weight: bold; /* Жирний шрифт */
+    color: #6c5bd8; /* Колір тексту */
+    
 }
 
 .header-links, .footer-links {
@@ -276,21 +287,172 @@ header, .footer {
         margin-top: 20px; // Задаємо верхній відступ для ряду зображень
     }
 
+.image-item {
+        text-align: center;
+        flex: 1;
+        width: 100%; /* Займає всю доступну ширину */
+    }
+
+.image-item img {
+        width: 100%; // Заповнюємо всю доступну ширину для зображення
+        border-radius: 10px; // Закруглення кутів для зображення
+}
+
+.text-container {
+        margin-top: 10px; // Задаємо верхній відступ для контейнера тексту
+}
+
+.text-container p {
+        font-size: 1em; // Задаємо розмір шрифту для тексту
+}
+
+
+.mobile-only {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* Стандартні стилі для першої секції */
+    .section:first-child h2,
+    .section:first-child p {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .section:first-child h2 {
+        margin-top: -140px;
+    }
+
+    .section:first-child p {
+        display: block;
+        clear: both;
+    }
+
+    .section:first-child .description {
+        float: right;
+        width: 50%;
+        margin-top: -140px;
+    }
+
+    .header-content,
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+
+    .section .text-container h2 {
+        font-size: 1.8em;
+        width: 100%; /* Розширюємо заголовок на всю ширину */
+        margin-left: auto; /* Центруємо заголовок */
+        margin-right: auto; /* Центруємо заголовок */
+    }
+
+    .section .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section .text-container p {
+        font-size: 1.1em;
+        max-width: 100%;
+        margin: 20px;
+        text-align: justify;
+        width: calc(100% - 40px); /* Додаємо розрахунок ширини для текстових блоків */
+        box-sizing: border-box; /* Враховуємо padding та border у визначенні ширини */
+    }
+
+    .section .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section:first-child::after {
+        display: none;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
     .image-item {
-        text-align: center; // Вирівнюємо текст по центру
-        flex: 1; // Встановлюємо рівномірну ширину для кожного елементу
+        text-align: center;
+        flex: 1 0 100%;
     }
 
     .image-item img {
-        width: 100%; // Заповнюємо всю доступну ширину для зображення
-        border-radius: 10px; // Закруглення кутів для зображення
+        width: 100%;
+        border-radius: 10px;
     }
 
-    .text-container {
-        margin-top: 10px; // Задаємо верхній відступ для контейнера тексту
+    .image-item h2 {
+        margin-bottom: 5px;
+        font-size: 1.2em;
     }
 
-    .text-container p {
-        font-size: 1em; // Задаємо розмір шрифту для тексту
+    .footer-links {
+        margin-top: 20px;
+    }
+
+    .section:not(:first-child) .image-container {
+        max-width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; /* Додаємо 100% ширини для зображення */
+    }
+
+    .section:not(:first-child) .image-row {
+        flex-wrap: wrap;
+        justify-content: center; /* Центруємо зображення по горизонталі */
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    .section:not(:first-child) .text-container p {
+        width: calc; /* Змінюємо розмір текстового блоку */
+    }
+    .section:not(:first-child) .flex-container {
+        justify-content: center;
+    }
+
+    .section:nth-child(2),
+    .section:nth-child(3),
+    .section:nth-child(4) {
+        max-height: 100vh; /* Залишаємо максимальну висоту секцій */
+        overflow-y: hidden; /* Ховаємо вертикальну прокрутку, якщо контент поміщається */
+    }
+
+    .section:nth-child(2) .text-container p,
+    .section:nth-child(3) .text-container p,
+    .section:nth-child(4) .text-container p {
+        width: 100%; /* Ширина тексту на весь екран, з відступами */
+    }
+
+    .section:nth-child(2) .image-row,
+    .section:nth-child(3) .image-row,
+    .section:nth-child(4) .image-row {
+        flex-direction: column; /* Розташування вертикально один за одним */
+        align-items: center; /* Центрування елементів по горизонталі */
+
     }
     
+}
